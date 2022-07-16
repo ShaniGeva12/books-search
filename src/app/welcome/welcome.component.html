@@ -1,1 +1,17 @@
-<p>welcome works!</p>
+<form class="welcome-from d-flex flex-wrap justify-content-center" [formGroup]="welcomeForm" (ngSubmit)="onSubmit()">
+    <div class="title col-12 d-flex justify-content-center">
+        Hello! Please enter your name:
+    </div>
+    <mat-form-field class="col-6" appearance="outline">
+        <mat-label>Name: </mat-label>
+        <input matInput placeholder="Name" data-test="name-input" formControlName="name" >
+        <mat-error *ngIf="welcomeForm.controls.name.errors">
+            Required Field
+        </mat-error>
+    </mat-form-field>
+    <div class="col-12 btn-container d-flex justify-content-center">
+        <button mat-raised-button data-test="name-submit" color="primary" type="submit" [disabled]="!welcomeForm.valid" >
+            Submit
+        </button>
+    </div>
+</form>
