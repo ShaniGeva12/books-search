@@ -1,6 +1,22 @@
-<nav class="app-header">
-    <i class="fa-solid fa-book"></i>
-    <a> main </a>
-    <a> abc </a>
-    <a> xyz </a>
+<nav class="app-header d-flex flex-wrap">
+    <div class="col-auto">
+        <i class="fa-solid fa-book"></i>
+    </div>
+    <div class="col">
+        <a> Search </a>
+    </div>
+    <div class="col">
+        <a> Wishlist </a>
+    </div>
+    <div class="col">
+        <a> About </a>
+    </div>
+   
+    <div class="col" *ngIf="username$ | async; let username; else spacer">
+       Welcome, {{ username }}
+    </div>
+    <ng-template #spacer>
+        <div class="col-8"></div>
+    </ng-template>
+    
 </nav>

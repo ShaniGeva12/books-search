@@ -13,6 +13,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
+
+.col, 
+[class|="col"]{ 
+    padding-inline: 15px;
+}
+
 .pointer{
     cursor: pointer;
 }

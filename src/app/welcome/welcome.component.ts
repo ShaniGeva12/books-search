@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SubSink } from 'subsink';
+import { WelcomeService } from './services/welcome.service';
 
 @Component({
   selector: 'app-welcome',
@@ -14,7 +15,10 @@ export class WelcomeComponent implements OnInit {
 
   subs: SubSink = new SubSink();
 
-  constructor(private router: Router, private fb: FormBuilder) { }
+  constructor(
+    private welcomeService: WelcomeService, 
+    private router: Router, 
+    private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.setForm();
@@ -30,11 +34,12 @@ export class WelcomeComponent implements OnInit {
 
   onSubmit(){
     // this.booksService.addBook(<AddBookRequest>this.bookForm.value);
-    this.navigateToBooks();
+    this.welcomeService.setUsername(this.welcomeForm.controls.name.value);
+    this.navigateToBooksSearch();
   }
 
-  navigateToBooks(){
-    // this.router.navigate(['/show-bands']);
+  navigateToBooksSearch(){
+    this.router.navigate(['/books']);
   }
 
   ngOnDestroy(): void {
