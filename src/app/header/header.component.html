@@ -2,17 +2,17 @@
     <div class="col-auto">
         <i class="fa-solid fa-book"></i>
     </div>
-    <div class="col">
+    <div class="col-auto">
         <a> Search </a>
     </div>
-    <div class="col">
+    <div class="col-auto">
         <a> Wishlist </a>
     </div>
-    <div class="col">
+    <!-- <div class="col">
         <a> About </a>
-    </div>
+    </div> -->
    
-    <div class="col-8 d-flex justify-content-end">
+    <div class="col d-flex justify-content-end">
         <span *ngIf="username$ | async; let username;">
             Welcome, {{ username }}
         </span>

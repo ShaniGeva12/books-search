@@ -1,1 +1,11 @@
-<p>books works!</p>
+<div class="books-component">
+    <form class=" d-flex justify-content-center" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="col-6" appearance="outline">
+            <mat-label>Book search: </mat-label>
+            <input matInput placeholder="Book name" data-test="search-input" formControlName="booksSearch" >
+            <mat-error *ngIf="searchForm.controls.booksSearch.errors">
+                Required Field
+            </mat-error>
+        </mat-form-field>
+    </form>
+</div>
