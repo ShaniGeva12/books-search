@@ -8,6 +8,7 @@ import { MaterialModule } from './modules/material.module';
 import { BooksComponent } from './books/books.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WelcomeGuard } from './guards/welcome.guard';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     MaterialModule,
   ],
-  providers: [],
+  providers: [WelcomeGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

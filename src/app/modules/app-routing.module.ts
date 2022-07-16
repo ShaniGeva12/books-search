@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BooksComponent } from '../books/books.component';
+import { WelcomeGuard } from '../guards/welcome.guard';
 import { WelcomeComponent } from '../welcome/welcome.component';
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'books',
-    component: BooksComponent
+    component: BooksComponent,
+    canActivate: [WelcomeGuard],
   },
   {
     path: 'book-details', 

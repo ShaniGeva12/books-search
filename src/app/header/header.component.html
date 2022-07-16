@@ -12,11 +12,9 @@
         <a> About </a>
     </div>
    
-    <div class="col" *ngIf="username$ | async; let username; else spacer">
-       Welcome, {{ username }}
+    <div class="col-8 d-flex justify-content-end">
+        <span *ngIf="username$ | async; let username;">
+            Welcome, {{ username }}
+        </span>
     </div>
-    <ng-template #spacer>
-        <div class="col-8"></div>
-    </ng-template>
-    
 </nav>
