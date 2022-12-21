@@ -109,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "books-search"
+  "defaultProject": "books-search",
+  "cli": {
+    "analytics": "f791a67a-5812-4d17-b65c-ba9e178271cd"
+  }
 }
