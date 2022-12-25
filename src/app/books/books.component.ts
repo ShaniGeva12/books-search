@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { SubSink } from 'subsink';
 
 @Component({
@@ -8,12 +8,12 @@ import { SubSink } from 'subsink';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit {
-  searchForm!: FormGroup;
+  searchForm!: UntypedFormGroup;
 
   subs: SubSink = new SubSink();
 
   constructor(
-    private fb: FormBuilder) { }
+    private fb: UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.setForm();

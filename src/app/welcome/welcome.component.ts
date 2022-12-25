@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SubSink } from 'subsink';
 import { WelcomeService } from './services/welcome.service';
@@ -11,14 +11,14 @@ import { WelcomeService } from './services/welcome.service';
 })
 export class WelcomeComponent implements OnInit {
   
-  welcomeForm!: FormGroup;
+  welcomeForm!: UntypedFormGroup;
 
   subs: SubSink = new SubSink();
 
   constructor(
     private welcomeService: WelcomeService, 
     private router: Router, 
-    private fb: FormBuilder) { }
+    private fb: UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.setForm();
