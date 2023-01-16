@@ -2,7 +2,7 @@
 @import "material-style.scss";
 
 //add bootstrap
-@import "~bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -14,8 +14,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
 
-.col, 
-[class|="col"]{ 
+.col,
+[class|="col"]{
     padding-inline: 15px;
 }
 
@@ -47,5 +47,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             }
         }
     }
-    
+
 }
